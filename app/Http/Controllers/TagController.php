@@ -35,4 +35,22 @@ class TagController extends Controller
 
         return redirect()->route('tags.index')->with('success', 'Tag deleted sucessfully.'); 
     }
+
+    public function trash() {
+        $deletedTags = Tag::onlyTrashed()->latest()->paginate(10);
+
+        return view('tags.trash', compact('deletedTags'));
+    }
+
+    public function restore($id) {
+        Tag::withTrashed()->find($id)->restore();
+
+        return redirect()->route('tags.index')->with('success', 'Tag updated sucessfully.');
+    }
+
+    public function permanentlyDelete($id) {
+        Tag::onlyTrashed()->find($id)->forceDelete();
+        
+        return redirect()->back()->with('success', 'Tag deleted sucessfully.');
+    }
 }

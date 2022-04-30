@@ -28,4 +28,9 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::prefix('tags')->group(function() {
+    Route::get('trash', [TagController::class, 'trash'])->name('tags.trash');
+    Route::get('restore/{id}', [TagController::class, 'restore'])->name('tags.restore');
+    Route::get('permanentlyDelete/{id}', [TagController::class, 'permanentlyDelete'])->name('tags.permanentlyDelete');
+});
 Route::resource('tags', TagController::class);
