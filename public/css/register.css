@@ -9,7 +9,7 @@
 
 .card {
     background-color: white;
-    height: 440px;
+    height: 550px;
     width: 400px;
     border-radius: 7px;
     position: absolute;
@@ -23,6 +23,7 @@
     background-color: #120A8F;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    margin-bottom: 30px;
     height: 65px;
     font-family: 'Titillium Web';
     color: white;
@@ -37,9 +38,12 @@
     margin: auto;
 }
 
+.form-group {
+    margin-top: 20px;
+}
+
 label {
     display: block;
-    margin-top: 30px;
 }
 
 .text-input {
@@ -56,14 +60,6 @@ label {
 a {
     all: unset;
     color: #120A8F;
-}
-
-#password-remember {
-    float: left;
-}
-
-#forgotten-password {
-    float: right;
 }
 
 .button {

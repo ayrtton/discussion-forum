@@ -2,15 +2,11 @@
 <html lang="en">
 
 <head>
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Login</title>
-
-        <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-    </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
 
 <body id="body">
@@ -23,15 +19,14 @@
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="row">
-                        <div class="form-group">
+                        <div>
                             <label for="email">Email</label>
                             <input type="email" class="text-input" id="email" name="email"
-                                aria-describedby="emailHelp" placeholder="Type your email">
+                                aria-describedby="emailHelp">
                         </div>
-                        <div class="form-group">
+                        <div>
                             <label for="password">Password</label>
-                            <input type="password" class="text-input" id="password" name="password"
-                                placeholder="Type your password">
+                            <input type="password" class="text-input" id="password" name="password">
                         </div>
                         <div>
                             <div id="password-remember">
