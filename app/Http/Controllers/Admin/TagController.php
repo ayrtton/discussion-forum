@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreTagRequest;
 use App\Http\Requests\UpdateTagRequest;
 use App\Models\Tag;
@@ -11,7 +12,7 @@ class TagController extends Controller
     public function index() {
         $tags = Tag::latest()->paginate(10);
 
-        return view('tags.index', compact('tags'));
+        return view('admin.tags.index', compact('tags'));
     }
 
     public function store(StoreTagRequest $request) {
@@ -21,7 +22,7 @@ class TagController extends Controller
     }
 
     public function edit(Tag $tag) {
-        return view('tags.edit', compact('tag'));
+        return view('admin.tags.edit', compact('tag'));
     }
 
     public function update(UpdateTagRequest $request, Tag $tag) {
@@ -39,7 +40,7 @@ class TagController extends Controller
     public function trash() {
         $deletedTags = Tag::onlyTrashed()->latest()->paginate(10);
 
-        return view('tags.trash', compact('deletedTags'));
+        return view('admin.tags.trash', compact('deletedTags'));
     }
 
     public function restore($id) {
