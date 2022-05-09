@@ -1,3 +1,8 @@
 <section id="hero">
-    <h1>Welcome</h1>
+    <div id="layer">
+        <div id="content">
+            <div id="message">Welcome to our forum!</div>
+            <button id="start-button">Get Started</button>
+        </div>
+    </div>
 </section>

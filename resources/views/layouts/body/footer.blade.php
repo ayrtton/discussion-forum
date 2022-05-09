@@ -1,3 +1,3 @@
 <footer id="footer">
-    Copyright © 2022
+    Copyright © 2022 Ayrton Vinicius 
 </footer>
