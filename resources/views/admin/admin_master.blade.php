@@ -45,7 +45,7 @@
                             <h4 class="dropdown-header">{{ auth()->user()->email }}</h4>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">Account Settings</a>
+                            <a class="dropdown-item" href="{{ route('profile.show') }}">Account Settings</a>
                         </li>
                         <li>
                             <form method="POST" action="{{ route('logout') }}">

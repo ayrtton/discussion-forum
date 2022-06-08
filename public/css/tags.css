@@ -1,0 +1,56 @@
+.container {
+    padding-top: 30px;
+}
+
+table {
+    width: 65%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: auto;
+    float: left;
+    background-color: #87cfeb52;
+}
+
+thead {
+    color: white;
+    background: #13274F;
+    height: 50px;
+}
+
+.tag-form {
+    width: 30%;
+    float: right;
+}
+
+tr {
+    height: 50px;
+}
+
+tr:nth-child(even) {
+    background-color: #87cfeb77;
+}
+
+.tr-counter {
+    padding-left: 20px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.edit-button, .edit-button:hover {
+    color: rgb(0, 0, 180);
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(180, 0, 0);
+}
+
+.card-header {
+    background-color: #13274F;
+    color: white;
+}

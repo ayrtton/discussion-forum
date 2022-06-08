@@ -7,7 +7,7 @@
     </div>
     <ul class="list-unstyled components">
         <li class="active">
-            <a href="#"><i class="bi bi-house-door-fill"></i>Home</a>
+            <a href="{{ route('home') }}"><i class="bi bi-house-door-fill"></i>Home</a>
         </li>
         <li>
             <a href="#"><i class="bi bi-bar-chart-fill"></i>Dashboard</a>

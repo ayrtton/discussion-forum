@@ -73,7 +73,7 @@ a:not(:hover) {
 #start-button {
     background-color: #87CEEB;
     padding: 15px;
-    margin: 25px 0 25px 0;
+    margin: 25px auto 25px auto;
     width: 200px;
     color: #120A8F;
     font-family: 'Titillium Web';
