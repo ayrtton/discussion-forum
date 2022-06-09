@@ -2,13 +2,24 @@
     padding-top: 30px;
 }
 
-table {
+.tags-table {
     width: 65%;
     border-collapse: collapse;
     border-radius: 4px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     margin: auto;
     float: left;
+    background-color: #87cfeb52;
+}
+
+.deleted-tags-table {
+    width: 65%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: auto;
     background-color: #87cfeb52;
 }
 
@@ -16,11 +27,7 @@ thead {
     color: white;
     background: #13274F;
     height: 50px;
-}
-
-.tag-form {
-    width: 30%;
-    float: right;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 tr {
@@ -35,12 +42,13 @@ tr:nth-child(even) {
     padding-left: 20px;
 }
 
-.delete-form {
-    display: inline;
+.edit-restore-button,
+.edit-restore-button:hover {
+    color: rgb(0, 0, 180);
 }
 
-.edit-button, .edit-button:hover {
-    color: rgb(0, 0, 180);
+.delete-form {
+    display: inline;
 }
 
 .delete-button {
@@ -50,7 +58,24 @@ tr:nth-child(even) {
     color: rgb(180, 0, 0);
 }
 
+.tag-card {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
 .card-header {
     background-color: #13274F;
     color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.add-tag-form {
+    width: 30%;
+    float: right;
+}
+
+.update-tag-form {
+    width: 50%;
+    margin: auto;
 }

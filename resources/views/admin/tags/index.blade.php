@@ -2,7 +2,7 @@
 
 @section('admin')
     <div class="container">
-        <table>
+        <table class="tags-table">
             <thead>
                 <tr>
                     <td scope="col"></td>
@@ -24,23 +24,21 @@
                             @endif
                         </td>
                         <td>
-                            <div class="flex items-center justify-end">
-                                <a href="{{ route('tags.edit', $tag->id) }}" class="edit-button">Edit</a>&nbsp;
-                                <form class="delete-form" action="{{ route('tags.destroy', $tag->id) }}" method="POST"
-                                    onsubmit="return confirm('Are you sure you want to delete this tag?');">
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input type="submit" class="delete-button" value="Delete">
-                                </form>
-                            </div>
+                            <a href="{{ route('tags.edit', $tag->id) }}" class="edit-restore-button">Edit</a>&nbsp;
+                            <form class="delete-form" action="{{ route('tags.destroy', $tag->id) }}" method="POST"
+                                onsubmit="return confirm('Are you sure you want to delete this tag?');">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="submit" class="delete-button" value="Delete">
+                            </form>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
 
-        <div class="tag-form">
-            <div class="card">
+        <div class="add-tag-form">
+            <div class="tag-card">
                 <div class="card-header">Add Tag</div>
                 <div class="card-body">
                     <form action="{{ route('tags.store') }}" method="POST" enctype="multipart/form-data">
@@ -48,11 +46,9 @@
                         <div class="mb-3">
                             <label for="title">Title</label>
                             <input type="text" name="title" class="form-control" id="title" aria-describedby="title">
-
                             @error('title')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
-
                         </div>
                         <button type="submit" class="btn btn-primary">Save</button>
                     </form>
