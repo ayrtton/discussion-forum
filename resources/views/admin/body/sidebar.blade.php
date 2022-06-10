@@ -13,6 +13,12 @@
             <a href="#"><i class="bi bi-bar-chart-fill"></i>Dashboard</a>
         </li>
         <li>
+            <a href="#"><i class="bi bi-person-lines-fill"></i>Roles</a>
+        </li>
+        <li>
+            <a href="#"><i class="bi bi-key-fill"></i>Permissions</a>
+        </li>
+        <li>
             <a href="#"><i class="bi bi-people-fill"></i>Users</a>
         </li>
         <li>
