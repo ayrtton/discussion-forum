@@ -24,8 +24,8 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('tags.edit', $tag->id) }}" class="edit-restore-button">Edit</a>&nbsp;
-                            <form class="delete-form" action="{{ route('tags.destroy', $tag->id) }}" method="POST"
+                            <a href="{{ route('admin.tags.edit', $tag->id) }}" class="edit-restore-button">Edit</a>&nbsp;
+                            <form class="delete-form" action="{{ route('admin.tags.destroy', $tag->id) }}" method="POST"
                                 onsubmit="return confirm('Are you sure you want to delete this tag?');">
                                 <input type="hidden" name="_method" value="DELETE">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -41,7 +41,7 @@
             <div class="tag-card">
                 <div class="card-header">Add Tag</div>
                 <div class="card-body">
-                    <form action="{{ route('tags.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.tags.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="title">Title</label>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="py-3">
-                <a class="btn btn-info" href="{{ route('tags.trash') }}">Deleted tags</a>
+                <a class="btn btn-info" href="{{ route('admin.tags.trash') }}">Deleted tags</a>
             </div>
         </div>
     </div>

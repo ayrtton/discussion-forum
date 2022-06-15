@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\TagController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,14 +25,16 @@ Route::get('/email/verify', function () {
 })->middleware('auth')->name('verification.notice');
 
 Route::middleware([
-    'auth:sanctum', 
-    config('jetstream.auth_session'), 
+    'auth:sanctum', config('jetstream.auth_session'), 
     'verified',
     'role:admin',
-])->group(function () {
+])->name('admin.')->prefix('/admin')->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.index');
     })->name('dashboard');
+
+    Route::resource('roles', RoleController::class);
+    Route::resource('permissions', PermissionController::class);
 
     Route::prefix('tags')->group(function() {
         Route::get('trash', [TagController::class, 'trash'])->name('tags.trash');
