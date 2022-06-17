@@ -1,0 +1,84 @@
+.container {
+    padding-top: 30px;
+}
+
+.add-button {
+    margin-bottom: 20px;
+}
+
+.roles-permissions-table {
+    width: 65%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: auto;
+    background-color: #87cfeb52;
+}
+
+.deleted-roles-permissions-table {
+    width: 65%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: auto;
+    background-color: #87cfeb52;
+}
+
+thead {
+    color: white;
+    background: #13274F;
+    height: 50px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+tr {
+    height: 50px;
+}
+
+tr:nth-child(even) {
+    background-color: #87cfeb77;
+}
+
+table tr td:first-child {
+    padding-left: 25px;
+}
+
+.edit-restore-button,
+.edit-restore-button:hover {
+    color: rgb(0, 0, 180);
+}
+
+.delete-form {
+    display: inline;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(180, 0, 0);
+}
+
+.role-card {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+    background-color: #13274F;
+    color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.add-role-form {
+    width: 30%;
+    float: right;
+}
+
+.update-role-form {
+    width: 50%;
+    margin: auto;
+}

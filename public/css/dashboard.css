@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
 @import 'tags.css';
+@import 'roles-permissions.css';
 
 body {
     font-family: 'Roboto', sans-serif;

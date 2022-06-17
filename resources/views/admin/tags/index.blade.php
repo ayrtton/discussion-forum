@@ -14,7 +14,7 @@
             <tbody>
                 @foreach ($tags as $tag)
                     <tr>
-                        <td class="tr-counter">{{ $tags->firstItem() + $loop->index }}</td>
+                        <td class="tr-counter">{{ $loop->iteration }}</td>
                         <td>{{ $tag->title }}</td>
                         <td>
                             @if ($tag->created_at == null)
