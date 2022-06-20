@@ -1,13 +1,15 @@
 .container {
     padding-top: 30px;
+    width: 65%;
 }
 
-.add-button {
+.add-button, .back-button {
     margin-bottom: 20px;
+    float: right;
 }
 
 .roles-permissions-table {
-    width: 65%;
+    width: 100%;
     border-collapse: collapse;
     border-radius: 4px;
     box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
@@ -73,12 +75,13 @@ table tr td:first-child {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-.add-role-form {
-    width: 30%;
-    float: right;
+.add-role-permission-container {
+    padding-top: 30px;
+    width: 75%;
+    margin: auto;
 }
 
-.update-role-form {
+.add-role-permission-form {
     width: 50%;
     margin: auto;
 }

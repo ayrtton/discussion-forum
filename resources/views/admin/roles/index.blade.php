@@ -2,7 +2,7 @@
 
 @section('admin')
     <div class="container">
-        <button type="submit" class="btn btn-primary add-button">Add Role</button>
+        <a href="{{ route('admin.roles.create') }}" class="btn btn-primary add-button">Add Role</a>
         <table class="roles-permissions-table">
             <thead>
                 <tr>
