@@ -24,9 +24,9 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('tags.restore', $deletedTag->id) }}"
+                            <a href="{{ route('admin.tags.restore', $deletedTag->id) }}"
                                 class="edit-restore-button">Restore</a>&ensp;
-                            <form class="delete-form" action="{{ route('tags.permanentlyDelete', $deletedTag->id) }}"
+                            <form class="delete-form" action="{{ route('admin.tags.permanentlyDelete', $deletedTag->id) }}"
                                 method="DELETE"
                                 onsubmit="return confirm('Are you sure you want to permanently delete this tag?');">
                                 <input type="hidden" name="_method" value="DELETE">

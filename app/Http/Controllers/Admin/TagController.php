@@ -18,7 +18,7 @@ class TagController extends Controller
     public function store(StoreTagRequest $request) {
         Tag::create($request->validated());
 
-        return redirect()->route('tags.index')->with('success', 'Tag inserted sucessfully.');
+        return redirect()->route('admin.tags.index')->with('success', 'Tag inserted sucessfully.');
     }
 
     public function edit(Tag $tag) {
@@ -28,13 +28,13 @@ class TagController extends Controller
     public function update(UpdateTagRequest $request, Tag $tag) {
         $tag->update($request->validated());
 
-        return redirect()->route('tags.index')->with('success', 'Tag updated sucessfully.');
+        return redirect()->route('admin.tags.index')->with('success', 'Tag updated sucessfully.');
     }
 
     public function destroy(Tag $tag) {
         $tag->delete();
 
-        return redirect()->route('tags.index')->with('success', 'Tag deleted sucessfully.'); 
+        return redirect()->route('admin.tags.index')->with('success', 'Tag deleted sucessfully.'); 
     }
 
     public function trash() {
@@ -46,7 +46,7 @@ class TagController extends Controller
     public function restore($id) {
         Tag::withTrashed()->find($id)->restore();
 
-        return redirect()->route('tags.index')->with('success', 'Tag updated sucessfully.');
+        return redirect()->route('admin.tags.index')->with('success', 'Tag updated sucessfully.');
     }
 
     public function permanentlyDelete($id) {

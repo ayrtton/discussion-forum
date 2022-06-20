@@ -1,7 +1,7 @@
 @extends('admin.admin_master')
 
 @section('admin')
-    <div class="container">
+    <div class="tags-container">
         <table class="tags-table">
             <thead>
                 <tr>
@@ -45,7 +45,8 @@
                         @csrf
                         <div class="mb-3">
                             <label for="title">Title</label>
-                            <input type="text" name="title" class="form-control" id="title" aria-describedby="title">
+                            <input type="text" name="title" class="form-control" id="title"
+                                aria-describedby="title">
                             @error('title')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
