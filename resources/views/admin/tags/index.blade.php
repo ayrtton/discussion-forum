@@ -2,6 +2,11 @@
 
 @section('admin')
     <div class="tags-container">
+        @if (session('success'))
+            <div id="snackbar">{{ session('success') }}</div>
+        @elseif (session('error'))
+            <div id="snackbar">{{ session('success') }}</div>
+        @endif
         <table class="tags-table">
             <thead>
                 <tr>

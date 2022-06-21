@@ -2,6 +2,11 @@
 
 @section('admin')
     <div class="container">
+        @if (session('success'))
+            <div id="snackbar">{{ session('success') }}</div>
+        @elseif (session('error'))
+            <div id="snackbar">{{ session('success') }}</div>
+        @endif
         <a href="{{ route('admin.roles.create') }}" class="btn btn-primary add-button">Add Role</a>
         <table class="roles-permissions-table">
             <thead>
@@ -25,9 +30,10 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('admin.roles.edit', $role->id) }}" class="edit-restore-button">Edit</a>&nbsp;
-                            <form class="delete-form" action="{{ route('admin.roles.destroy', $role->id) }}" method="POST"
-                                onsubmit="return confirm('Are you sure you want to delete this role?');">
+                            <a href="{{ route('admin.roles.edit', $role->id) }}"
+                                class="edit-restore-button">Edit</a>&nbsp;
+                            <form class="delete-form" action="{{ route('admin.roles.destroy', $role->id) }}"
+                                method="POST" onsubmit="return confirm('Are you sure you want to delete this role?');">
                                 <input type="hidden" name="_method" value="DELETE">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="submit" class="delete-button" value="Delete">
