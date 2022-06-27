@@ -33,6 +33,7 @@ Route::middleware([
         return view('admin.index');
     })->name('dashboard');
 
+    Route::post('/roles/{role}/permissions', [RoleController::class, 'assignPermissions'])->name('roles.permissions');
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
 
