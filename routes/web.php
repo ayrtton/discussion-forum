@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,11 @@ Route::get('/email/verify', function () {
     return view('auth.verify-email');
 })->middleware('auth')->name('verification.notice');
 
+
+Route::get('/dashboard', function () {
+    return view('user.index');
+})->name('dashboard');
+
 Route::middleware([
     'auth:sanctum', config('jetstream.auth_session'), 
     'verified',
@@ -36,6 +42,7 @@ Route::middleware([
     Route::post('/roles/{role}/permissions', [RoleController::class, 'assignPermissions'])->name('roles.permissions');
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
+    Route::resource('users', UserController::class);
 
     Route::prefix('tags')->group(function() {
         Route::get('trash', [TagController::class, 'trash'])->name('tags.trash');
