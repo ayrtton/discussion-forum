@@ -13,6 +13,7 @@
                 <tr>
                     <td scope="col">ID</td>
                     <td scope="col">Title</td>
+                    <td scope="col">Permissions</td>
                     <td scope="col">Created</td>
                     <td scope="col"></td>
                 </tr>
@@ -21,7 +22,14 @@
                 @foreach ($roles as $role)
                     <tr>
                         <td>{{ $role->id }}</td>
-                        <td>{{ $role->title }}</td>
+                        <td class="row-title">{{ $role->title }}</td>
+                        <td>
+                            @forelse ($role->permissions as $permission)
+                                <span class="permission-span">{{ $permission->title }}</span>
+                            @empty
+                                <span class="no-permissions-span">No Permissions</span>
+                            @endforelse
+                        </td>
                         <td>
                             @if ($role->created_at == null)
                                 <span class="text-danger">Date not defined</span>

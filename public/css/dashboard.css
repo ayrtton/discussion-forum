@@ -3,6 +3,7 @@
 
 @import 'tags.css';
 @import 'roles-permissions.css';
+@import 'users.css';
 
 body {
     font-family: 'Roboto', sans-serif;

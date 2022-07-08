@@ -19,7 +19,7 @@
             <a href="{{ route('admin.permissions.index') }}"><i class="bi bi-key-fill"></i>Permissions</a>
         </li>
         <li>
-            <a href="#"><i class="bi bi-people-fill"></i>Users</a>
+            <a href="{{ route('admin.users.index') }}"><i class="bi bi-people-fill"></i>Users</a>
         </li>
         <li>
             <a href="#"><i class="bi bi-question-square-fill"></i>Questions</a>
