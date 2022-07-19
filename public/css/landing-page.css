@@ -7,45 +7,47 @@
     font-family: 'Roboto';
 }
 
-/* Header */
-#header {
+a {
+    text-decoration: none;
+}
+
+/* Nav */
+#navbar {
     position: absolute;
     width: 100%;
     height: auto;
     font-size: 20px;
 }
 
-a {
-    text-decoration: none;
+#navbar a {
     color: white;
     font-family: 'Titillium Web';
 }
 
-a:hover {
+#navbar a:hover {
     color: #87CEEB;
     transition: 1.1s;
 }
 
-a:not(:hover) {
+#navbar a:not(:hover) {
     transition: 0.5s;
 }
 
-#header ul {
+#navbar ul {
     list-style: none;
     padding: 25px;
 }
 
-#header li {
+#navbar li {
     float: right;
     padding-right: 35px;
 }
 
 /* Hero */
 #hero {
-    height: 100vh;
     background: url('https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 

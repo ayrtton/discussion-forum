@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    @include('layouts.body.header')
-    @include('layouts.body.hero')
+    @include('layouts.components.navbar')
+    @include('layouts.components.hero')
     <main id="main">
-        @yield('home_content')
+        @yield('landing-page-content')
     </main>
-    @include('layouts.body.footer')
+    @include('layouts.components.footer')
 </body>
 
 </html>

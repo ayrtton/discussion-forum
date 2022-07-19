@@ -11,6 +11,7 @@
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href=" {{ asset('css/dashboard.css') }} ">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
         integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
@@ -29,7 +30,7 @@
 
 <body>
     <div class="wrapper">
-        @include('admin.body.sidebar')
+        @include('layouts.components.sidebar')
         <div id="content">
             <nav class="navbar">
                 <button type="button" id="sidebarCollapse" class="btn btn-info">

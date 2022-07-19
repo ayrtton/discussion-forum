@@ -1,4 +1,4 @@
-<header id="header" class="fixed-top">
+<nav id="navbar" class="fixed-top">
     <ul>
         @if (Route::has('login'))
             @auth
@@ -17,4 +17,4 @@
             </div>
         @endif
     </ul>
-</header>
+</nav>
