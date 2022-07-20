@@ -1,4 +1,4 @@
-@extends('admin.admin_master')
+@extends('layouts.main-layout')
 
 @section('admin')
     <div class="container">
