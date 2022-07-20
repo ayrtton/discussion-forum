@@ -4,6 +4,7 @@
 @import 'tags.css';
 @import 'roles-permissions.css';
 @import 'users.css';
+@import 'questions.css';
 
 body {
     font-family: 'Roboto', sans-serif;

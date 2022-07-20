@@ -1,0 +1,10 @@
+.questions-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: auto 0px 50px;
+    background-color: #87cfeb52;
+    text-transform: capitalize;
+}

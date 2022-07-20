@@ -22,7 +22,7 @@
             <a href="{{ route('admin.users.index') }}"><i class="bi bi-people-fill"></i>Users</a>
         </li>
         <li>
-            <a href="#"><i class="bi bi-question-square-fill"></i>Questions</a>
+            <a href="{{ route('admin.questions.index') }}"><i class="bi bi-question-square-fill"></i>Questions</a>
         </li>
         <li>
             <a href="{{ route('admin.tags.index') }}"><i class="bi bi-tags-fill"></i>Tags</a>

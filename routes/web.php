@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
@@ -43,6 +44,7 @@ Route::middleware([
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
     Route::resource('users', UserController::class);
+    Route::resource('questions', QuestionController::class);
 
     Route::prefix('tags')->group(function() {
         Route::get('trash', [TagController::class, 'trash'])->name('tags.trash');
