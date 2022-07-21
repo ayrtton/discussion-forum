@@ -16,22 +16,30 @@ class TagController extends Controller
     }
 
     public function store(StoreTagRequest $request) {
+        $this->authorize('create', Tag::class);
+
         Tag::create($request->validated());
 
         return redirect()->route('admin.tags.index')->with('success', 'Tag inserted sucessfully.');
     }
 
     public function edit(Tag $tag) {
+        $this->authorize('update', $tag);
+
         return view('admin.tags.edit', compact('tag'));
     }
 
     public function update(UpdateTagRequest $request, Tag $tag) {
+        $this->authorize('update', $tag);
+
         $tag->update($request->validated());
 
         return redirect()->route('admin.tags.index')->with('success', 'Tag updated sucessfully.');
     }
 
     public function destroy(Tag $tag) {
+        $this->authorize('delete', $tag);
+
         $tag->delete();
 
         return redirect()->route('admin.tags.index')->with('success', 'Tag deleted sucessfully.'); 
