@@ -7,7 +7,7 @@
         @elseif (session('error'))
             <div id="snackbar">{{ session('success') }}</div>
         @endif
-        <a href="{{ route('admin.questions.create') }}" class="btn btn-primary add-button">Add Question</a>
+        <a href="{{ route('questions.create') }}" class="btn btn-primary add-button">Add Question</a>
         <table class="questions-table">
             <thead>
                 <tr>
@@ -22,9 +22,9 @@
                         <td>{{ $question->id }}</td>
                         <td class="row-title">{{ $question->title }}</td>
                         <td>
-                            <a href="{{ route('admin.questions.edit', $question->id) }}"
+                            <a href="{{ route('questions.edit', $question->id) }}"
                                 class="edit-restore-button">Edit</a>&nbsp;
-                            <form class="delete-form" action="{{ route('admin.questions.destroy', $question->id) }}"
+                            <form class="delete-form" action="{{ route('questions.destroy', $question->id) }}"
                                 method="POST" onsubmit="return confirm('Are you sure you want to delete this question?');">
                                 <input type="hidden" name="_method" value="DELETE">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

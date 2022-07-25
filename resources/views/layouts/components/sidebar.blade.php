@@ -12,20 +12,22 @@
         <li>
             <a href="#"><i class="bi bi-bar-chart-fill"></i>Dashboard</a>
         </li>
+        @admin
+            <li>
+                <a href="{{ route('admin.roles.index') }}"><i class="bi bi-person-lines-fill"></i>Roles</a>
+            </li>
+            <li>
+                <a href="{{ route('admin.permissions.index') }}"><i class="bi bi-key-fill"></i>Permissions</a>
+            </li>
+            <li>
+                <a href="{{ route('admin.users.index') }}"><i class="bi bi-people-fill"></i>Users</a>
+            </li>
+        @endadmin
         <li>
-            <a href="{{ route('admin.roles.index') }}"><i class="bi bi-person-lines-fill"></i>Roles</a>
+            <a href="{{ route('questions.index') }}"><i class="bi bi-question-square-fill"></i>Questions</a>
         </li>
         <li>
-            <a href="{{ route('admin.permissions.index') }}"><i class="bi bi-key-fill"></i>Permissions</a>
-        </li>
-        <li>
-            <a href="{{ route('admin.users.index') }}"><i class="bi bi-people-fill"></i>Users</a>
-        </li>
-        <li>
-            <a href="{{ route('admin.questions.index') }}"><i class="bi bi-question-square-fill"></i>Questions</a>
-        </li>
-        <li>
-            <a href="{{ route('admin.tags.index') }}"><i class="bi bi-tags-fill"></i>Tags</a>
+            <a href="{{ route('tags.index') }}"><i class="bi bi-tags-fill"></i>Tags</a>
         </li>
     </ul>
 </nav>

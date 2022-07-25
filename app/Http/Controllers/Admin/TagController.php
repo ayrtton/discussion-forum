@@ -12,7 +12,7 @@ class TagController extends Controller
     public function index() {
         $tags = Tag::latest()->paginate(10);
 
-        return view('admin.tags.index', compact('tags'));
+        return view('common.tags.index', compact('tags'));
     }
 
     public function store(StoreTagRequest $request) {
@@ -20,13 +20,13 @@ class TagController extends Controller
 
         Tag::create($request->validated());
 
-        return redirect()->route('admin.tags.index')->with('success', 'Tag inserted sucessfully.');
+        return redirect()->route('common.tags.index')->with('success', 'Tag inserted sucessfully.');
     }
 
     public function edit(Tag $tag) {
         $this->authorize('update', $tag);
 
-        return view('admin.tags.edit', compact('tag'));
+        return view('common.tags.edit', compact('tag'));
     }
 
     public function update(UpdateTagRequest $request, Tag $tag) {
@@ -34,7 +34,7 @@ class TagController extends Controller
 
         $tag->update($request->validated());
 
-        return redirect()->route('admin.tags.index')->with('success', 'Tag updated sucessfully.');
+        return redirect()->route('common.tags.index')->with('success', 'Tag updated sucessfully.');
     }
 
     public function destroy(Tag $tag) {
@@ -42,19 +42,19 @@ class TagController extends Controller
 
         $tag->delete();
 
-        return redirect()->route('admin.tags.index')->with('success', 'Tag deleted sucessfully.'); 
+        return redirect()->route('common.tags.index')->with('success', 'Tag deleted sucessfully.'); 
     }
 
     public function trash() {
         $deletedTags = Tag::onlyTrashed()->latest()->paginate(10);
 
-        return view('admin.tags.trash', compact('deletedTags'));
+        return view('common.tags.trash', compact('deletedTags'));
     }
 
     public function restore($id) {
         Tag::withTrashed()->find($id)->restore();
 
-        return redirect()->route('admin.tags.index')->with('success', 'Tag updated sucessfully.');
+        return redirect()->route('common.tags.index')->with('success', 'Tag updated sucessfully.');
     }
 
     public function permanentlyDelete($id) {

@@ -47,7 +47,7 @@ class TagPolicy
      */
     public function create(User $user)
     {
-        return $user->role->hasPermission('create tag');
+        return $user->role->hasPermission('create tags');
     }
 
     /**
@@ -59,7 +59,7 @@ class TagPolicy
      */
     public function update(User $user, Tag $tag)
     {
-        return $user->role->hasPermission('update tag');
+        return $user->role->hasPermission('update tags');
     }
 
     /**

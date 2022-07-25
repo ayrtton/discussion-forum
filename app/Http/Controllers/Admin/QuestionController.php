@@ -11,6 +11,6 @@ class QuestionController extends Controller
     public function index() {
         $questions = Question::all();
 
-        return view('admin.questions.index', compact('questions'));
+        return view('common.questions.index', compact('questions'));
     }
 }

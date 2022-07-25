@@ -26,13 +26,8 @@ Route::get('/email/verify', function () {
     return view('auth.verify-email');
 })->middleware('auth')->name('verification.notice');
 
-
-Route::get('/dashboard', function () {
-    return view('user.index');
-})->name('dashboard');
-
 Route::middleware([
-    'auth:sanctum', config('jetstream.auth_session'), 
+    'auth:sanctum', config('jetstream.auth_session'),
     'verified',
     'role:admin',
 ])->name('admin.')->prefix('/admin')->group(function () {
@@ -44,9 +39,19 @@ Route::middleware([
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
     Route::resource('users', UserController::class);
+});
+
+Route::middleware([
+    'auth:sanctum', config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('user.index');
+    })->name('dashboard');
+
     Route::resource('questions', QuestionController::class);
 
-    Route::prefix('tags')->group(function() {
+    Route::prefix('tags')->group(function () {
         Route::get('trash', [TagController::class, 'trash'])->name('tags.trash');
         Route::get('restore/{id}', [TagController::class, 'restore'])->name('tags.restore');
         Route::get('permanentlyDelete/{id}', [TagController::class, 'permanentlyDelete'])->name('tags.permanentlyDelete');
@@ -54,5 +59,3 @@ Route::middleware([
 
     Route::resource('tags', TagController::class);
 });
-
-
