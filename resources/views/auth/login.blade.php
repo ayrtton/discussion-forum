@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body id="body">
@@ -18,7 +18,7 @@
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ route('login') }}">
-                    @csrf
+                    {{ csrf_field() }}
                     <div class="row">
                         <div>
                             <label for="email">Email</label>
