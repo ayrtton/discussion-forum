@@ -7,7 +7,7 @@
 
     <title>Discussion Forum</title>
 
-    <link href=" {{ asset('css/landing-page.css') }} " rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet">
 </head>
 
 <body>
