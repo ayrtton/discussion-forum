@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\Models\Question::factory(10)->create();
-        //$this->call(RolesSeeder::class);
+        $this->call(RolesSeeder::class);
     }
 }
